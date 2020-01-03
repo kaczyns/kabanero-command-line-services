@@ -170,11 +170,11 @@ public class CollectionsUtils {
 		return null;
 	}
 	
-	public static String getMasterCollectionUrl(Kabanero k) {
+	public static KabaneroSpecCollectionsRepositories getMasterCollectionUrl(Kabanero k) {
 		try {
 			List<KabaneroSpecCollectionsRepositories> collections = k.getSpec().getCollections().getRepositories();
 			if ((collections != null) && (collections.size() > 0)) {
-				return collections.get(0).getUrl();
+				return collections.get(0);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

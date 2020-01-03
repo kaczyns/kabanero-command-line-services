@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * CollectionSpec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-12-23T16:26:35.229Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-03T21:57:43.607Z[Etc/UTC]")
 public class CollectionSpec {
   public static final String SERIALIZED_NAME_DESIRED_STATE = "desiredState";
   @SerializedName(SERIALIZED_NAME_DESIRED_STATE)
@@ -37,6 +37,10 @@ public class CollectionSpec {
   public static final String SERIALIZED_NAME_REPOSITORY_URL = "repositoryUrl";
   @SerializedName(SERIALIZED_NAME_REPOSITORY_URL)
   private String repositoryUrl;
+
+  public static final String SERIALIZED_NAME_SKIP_CERT_VERIFICATION = "skipCertVerification";
+  @SerializedName(SERIALIZED_NAME_SKIP_CERT_VERIFICATION)
+  private Boolean skipCertVerification;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -116,6 +120,29 @@ public class CollectionSpec {
   }
 
 
+  public CollectionSpec skipCertVerification(Boolean skipCertVerification) {
+    
+    this.skipCertVerification = skipCertVerification;
+    return this;
+  }
+
+   /**
+   * Get skipCertVerification
+   * @return skipCertVerification
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getSkipCertVerification() {
+    return skipCertVerification;
+  }
+
+
+  public void setSkipCertVerification(Boolean skipCertVerification) {
+    this.skipCertVerification = skipCertVerification;
+  }
+
+
   public CollectionSpec version(String version) {
     
     this.version = version;
@@ -188,6 +215,7 @@ public class CollectionSpec {
     sb.append("    desiredState: ").append(toIndentedString(desiredState)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    repositoryUrl: ").append(toIndentedString(repositoryUrl)).append("\n");
+    sb.append("    skipCertVerification: ").append(toIndentedString(skipCertVerification)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    versions: ").append(toIndentedString(versions)).append("\n");
     sb.append("}");
