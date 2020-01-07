@@ -152,6 +152,11 @@
 			<scope>provided</scope>
 			<type>war</type>
 		</dependency>
+    <dependency>
+      <groupId>io.kabanero</groupId>
+      <artifactId>operator-java-bindings</artifactId>
+      <version>0.0.1</version>
+    </dependency>
 	</dependencies>
 
 	<build>
